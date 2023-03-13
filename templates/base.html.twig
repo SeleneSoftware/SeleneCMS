@@ -43,6 +43,7 @@
                                     </li>
                                     <li>
                                         <a href="{{ path('selene_cms_blog') }}">Blog</a>
+                                        {# I don't want to remove this completly, just not show it.
                                         <ul>
                                             <li>
                                                 <a href="#">
@@ -84,18 +85,16 @@
                                             </li>
                                         </ul>
                                     </li>
+                                    #}
                                     <li>
-                                        <a href="left-sidebar.html">
-                                            Left Sidebar
+                                        <a href="#">
+                                            About Us
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="right-sidebar.html">
-                                            Right Sidebar
+                                        <a href="#">
+                                            Contact Us
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="no-sidebar.html">No Sidebar FOOL</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -130,9 +129,10 @@
                 </div>
             </div>
 
+            {% block mainWrapper %}
             <!-- Main Wrapper -->
             <div id="main-wrapper">
-                <div class="wrapper style1">
+                <div class="wrapper {{ wrapperStyle|default('style1') }}">
                     <div class="inner">
                         <!-- Feature 1 -->
                         <section class="container box feature1">
@@ -444,6 +444,7 @@
                     </div>
                 </div>
             </div>
+            {% endblock %}
 
             <!-- Footer Wrapper -->
             <div id="footer-wrapper">
