@@ -1,74 +1,68 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}
-    {{ parent() }} | Log in!
-{% endblock %}
+{% set pageType='left-sidebar' %}
 
-{% set pageID = 'login' %}
+{% block banner %}{% endblock %}
 
-{% block banner %}
-{% endblock %}
-{% block posts %}
-{% endblock %}
-{% block sidebar %}
-{% endblock %}
+    {% block mainWrapper %}
+        <div id="main-wrapper">
+            <div class="wrapper style2">
+                <div class="inner">
+                    <div class="container">
+                        <div id="content">
 
-{% block major %}
-    <h3>
-        Please sign in
-    </h3>
-    <form method="post">
-        <div class="row gtr-uniform">
-            {% if error %}
-                <div class="alert alert-danger">
-                    {{ error.messageKey|trans(error.messageData, 'security') }}
-                </div>
-            {% endif %}
+                            <!-- Content -->
+                            <article>
+                                <header class="major">
+                                    <h2>Login</h2>
+                                    <p>Sign in here</p>
+                                </header>
+                                <form method="post">
+                                    {% if error %}
+                                        <div class="alert alert-danger">
+                                            {{ error.messageKey|trans(error.messageData, 'security') }}
+                                        </div>
+                                    {% endif %}
 
-            {% if app.user %}
-                <h3>
-                    You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
-                </h3>
-            {% endif %}
+                                    {% if app.user %}
+                                        <h3>
+                                            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                                        </h3>
+                                    {% endif %}
 
-            <div class="col-6 col-12-xsmall">
-                <input type="email"
-                    value="{{ last_username }}"
-                    name="email"
-                    id="inputEmail"
-                    class="form-control"
-                    autocomplete="email"
-                    required
-                    placeholder="Email Address"
-                    autofocus />
+                                    <input type="email"
+                                           value="{{ last_username }}"
+                                           name="email"
+                                           id="inputEmail"
+                                           class="form-control"
+                                           autocomplete="email"
+                                           required
+                                           placeholder="Email Address"
+                                           autofocus />
 
-                <input type="password"
-                    name="password"
-                    id="inputPassword"
-                    class="form-control"
-                    autocomplete="current-password"
-                    placeholder="Password"
-                    required />
+                                    <input type="password"
+                                           name="password"
+                                           id="inputPassword"
+                                           class="form-control"
+                                           autocomplete="current-password"
+                                           placeholder="Password"
+                                           required />
 
-                <input type="hidden"
-                    name="_csrf_token"
-                    value="{{ csrf_token('authenticate') }}" />
+                                    <input type="hidden"
+                                           name="_csrf_token"
+                                           value="{{ csrf_token('authenticate') }}" />
 
-                {#
-                            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-                            See https://symfony.com/doc/current/security/remember_me.html
+                                    {#
+                                    Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                                    See https://symfony.com/doc/current/security/remember_me.html
 
-                            <div class="checkbox mb-3">
-                                <label>
-                                    <input type="checkbox" name="_remember_me"> Remember me
-                                </label>
-                            </div>
-                            #}
+                                    <div class="checkbox mb-3">
+                                        <label>
+                                            <input type="checkbox" name="_remember_me"> Remember me
+                                        </label>
+                                    </div>
+                                    #}
 
-                <div class="col-12">
-                    <input type="submit" value="Login" class="primary" />
-                </div>
-            </div>
-        </div>
-    </form>
-{% endblock %}
+                                    <input type="submit" value="Login" class="primary" />
+                                </form>
+    {% endblock %}
