@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b873f41eef79d151f2d89c5e6aad8ddf",
+    "content-hash": "2a80c302085d96a67bfcebe1c6f23685",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -1391,16 +1391,16 @@
         },
         {
             "name": "easycorp/easyadmin-bundle",
-            "version": "v4.6.0",
+            "version": "v4.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/EasyCorp/EasyAdminBundle.git",
-                "reference": "90b3ccd9565b986d9d39ed8ca7f390063a760321"
+                "reference": "340548d93c2f6a732a71a528668fdf155d4a2f25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/90b3ccd9565b986d9d39ed8ca7f390063a760321",
-                "reference": "90b3ccd9565b986d9d39ed8ca7f390063a760321",
+                "url": "https://api.github.com/repos/EasyCorp/EasyAdminBundle/zipball/340548d93c2f6a732a71a528668fdf155d4a2f25",
+                "reference": "340548d93c2f6a732a71a528668fdf155d4a2f25",
                 "shasum": ""
             },
             "require": {
@@ -1472,7 +1472,7 @@
             ],
             "support": {
                 "issues": "https://github.com/EasyCorp/EasyAdminBundle/issues",
-                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.6.0"
+                "source": "https://github.com/EasyCorp/EasyAdminBundle/tree/v4.6.1"
             },
             "funding": [
                 {
@@ -1480,7 +1480,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-20T19:01:40+00:00"
+            "time": "2023-03-12T10:16:10+00:00"
         },
         {
             "name": "league/commonmark",
@@ -2090,17 +2090,17 @@
             "time": "2021-07-14T16:46:02+00:00"
         },
         {
-            "name": "selene/cms-bundle",
+            "name": "selenesoftware/cms-bundle",
             "version": "dev-main",
             "source": {
                 "type": "git",
-                "url": "git@github.com:SeleneSoftware/seleneCMSBundle.git",
-                "reference": "bdb90faf5b0271fa9d7fed0db0547102598da99f"
+                "url": "https://github.com/SeleneSoftware/seleneCMSBundle.git",
+                "reference": "be43e92d78b8856a2982bbb32e1bcda11c4da5ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/bdb90faf5b0271fa9d7fed0db0547102598da99f",
-                "reference": "bdb90faf5b0271fa9d7fed0db0547102598da99f",
+                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/be43e92d78b8856a2982bbb32e1bcda11c4da5ef",
+                "reference": "be43e92d78b8856a2982bbb32e1bcda11c4da5ef",
                 "shasum": ""
             },
             "require": {
@@ -2115,10 +2115,12 @@
                 "presta/sitemap-bundle": "^3.3",
                 "symfony/form": "6.2.*",
                 "symfony/framework-bundle": "6.2.*",
+                "symfony/http-kernel": "6.2.*",
                 "symfony/orm-pack": "^2.3",
                 "symfony/runtime": "6.2.*",
                 "symfony/security-bundle": "6.2.*",
                 "symfony/security-csrf": "6.2.*",
+                "symfonycasts/reset-password-bundle": "^1.17",
                 "twig/extra-bundle": "^3.4",
                 "twig/markdown-extra": "^3.4",
                 "twig/twig": "^2.12|^3.0"
@@ -2140,8 +2142,8 @@
             ],
             "authors": [
                 {
-                    "name": "Jason Marshall",
-                    "homepage": "https://github.com/psion"
+                    "name": "Jason Marshall - JasonMarshallSelene@gmail.com",
+                    "homepage": "https://github.com/SeleneSoftware"
                 }
             ],
             "description": "CMS platform for Symfony",
@@ -2150,7 +2152,7 @@
                 "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/main",
                 "issues": "https://github.com/SeleneSoftware/seleneCMSBundle/issues"
             },
-            "time": "2023-03-06T14:59:35+00:00"
+            "time": "2023-03-16T03:07:36+00:00"
         },
         {
             "name": "symfony/asset",
@@ -6259,6 +6261,56 @@
             "time": "2023-02-16T09:57:23+00:00"
         },
         {
+            "name": "symfonycasts/reset-password-bundle",
+            "version": "v1.17.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SymfonyCasts/reset-password-bundle.git",
+                "reference": "6601f15fce7a4934bc9570f76feaf1b93536b1a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SymfonyCasts/reset-password-bundle/zipball/6601f15fce7a4934bc9570f76feaf1b93536b1a7",
+                "reference": "6601f15fce7a4934bc9570f76feaf1b93536b1a7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.2.5",
+                "symfony/config": "^5.4 | ^6.0",
+                "symfony/dependency-injection": "^5.4 | ^6.0",
+                "symfony/deprecation-contracts": "^2.2 | ^3.0",
+                "symfony/http-kernel": "^5.4 | ^6.0"
+            },
+            "conflict": {
+                "doctrine/orm": "<2.7",
+                "php": ">=8.1 <8.1.10"
+            },
+            "require-dev": {
+                "doctrine/annotations": "^1.0",
+                "doctrine/doctrine-bundle": "^2.0.3",
+                "doctrine/orm": "^2.7",
+                "symfony/framework-bundle": "^5.4 | ^6.0",
+                "symfony/phpunit-bridge": "^5.4 | ^6.0"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "SymfonyCasts\\Bundle\\ResetPassword\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Symfony bundle that adds password reset functionality.",
+            "support": {
+                "issues": "https://github.com/SymfonyCasts/reset-password-bundle/issues",
+                "source": "https://github.com/SymfonyCasts/reset-password-bundle/tree/v1.17.0"
+            },
+            "time": "2023-02-02T15:11:33+00:00"
+        },
+        {
             "name": "twig/extra-bundle",
             "version": "v3.5.1",
             "source": {
@@ -6719,7 +6771,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "selene/cms-bundle": 20
+        "selenesoftware/cms-bundle": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -1,51 +1,47 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    Log in!
+    {{ parent() }} | Log in!
 {% endblock %}
 
-{% block intro %}
+{% set pageID = 'login' %}
 
+{% block banner %}
 {% endblock %}
 {% block posts %}
-
+{% endblock %}
+{% block sidebar %}
 {% endblock %}
 
-{% block featuredpost %}
-    <form method="post" class="alt">
-        <div class="row uniform">
+{% block major %}
+    <h3>
+        Please sign in
+    </h3>
+    <form method="post">
+        <div class="row gtr-uniform">
             {% if error %}
                 <div class="alert alert-danger">
                     {{ error.messageKey|trans(error.messageData, 'security') }}
                 </div>
             {% endif %}
 
-            {#
             {% if app.user %}
-                <div class="mb-3">
+                <h3>
                     You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
-                </div>
+                </h3>
             {% endif %}
-            #}
-            <article class="post featured">
-                <header class="major">
-                    <h2>
-                        Please sign in
-                    </h2>
-                </header>
-            </article>
-            <div class="12u$">
+
+            <div class="col-6 col-12-xsmall">
                 <input type="email"
                     value="{{ last_username }}"
                     name="email"
                     id="inputEmail"
                     class="form-control"
                     autocomplete="email"
-                    placeholder="E-Mail"
                     required
+                    placeholder="Email Address"
                     autofocus />
-            </div>
-            <div class="12u$">
+
                 <input type="password"
                     name="password"
                     id="inputPassword"
@@ -53,30 +49,25 @@
                     autocomplete="current-password"
                     placeholder="Password"
                     required />
-            </div>
-            <input type="hidden"
-                name="_csrf_token"
-                value="{{ csrf_token('authenticate') }}" />
 
-            {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
+                <input type="hidden"
+                    name="_csrf_token"
+                    value="{{ csrf_token('authenticate') }}" />
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-    #}
-            <div class="12u$">
-                <ul class="actions">
-                    <li>
-                        <input type="submit"
-                            value="Send Message"
-                            class="special" />
-                    </li>
-                    <li><input type="reset" value="Reset" /></li>
-                </ul>
+                {#
+                            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+                            See https://symfony.com/doc/current/security/remember_me.html
+
+                            <div class="checkbox mb-3">
+                                <label>
+                                    <input type="checkbox" name="_remember_me"> Remember me
+                                </label>
+                            </div>
+                            #}
+
+                <div class="col-12">
+                    <input type="submit" value="Login" class="primary" />
+                </div>
             </div>
         </div>
     </form>

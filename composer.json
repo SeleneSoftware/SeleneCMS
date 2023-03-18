@@ -7,7 +7,7 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "selene/cms-bundle": "dev-main",
+        "selenesoftware/cms-bundle": "dev-main",
         "symfony/console": "6.2.*",
         "symfony/dotenv": "6.2.*",
         "symfony/flex": "^2",
