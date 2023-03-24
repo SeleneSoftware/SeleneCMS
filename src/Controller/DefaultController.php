@@ -2,18 +2,18 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Doctrine\Persistence\ManagerRegistry;
+use Selene\CMSBundle\Controller\BlogController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use Selene\CMSBundle\Controller\BlogController;
 
 class DefaultController extends BlogController
 {
     #[Route('/', name: 'app_default')]
-    public function index(): Response
+    public function index(ManagerRegistry $doctrine): Response
     {
         return $this->render('default/index.html.twig', [
-            'controller_name' => 'DefaultController',
+            'recentBlogs' => $this->getBlogList($doctrine, 3),
         ]);
     }
 }

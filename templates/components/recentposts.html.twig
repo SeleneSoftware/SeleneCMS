@@ -1,0 +1,19 @@
+{% for blog in computed.blogs %}
+    <!-- Excerpt -->
+    <article class="box excerpt">
+        <a href="" class="image left">
+            <img src="{{ blog.getImageFile|default(asset('build/images/pic04.jpg')) }}" alt="" />
+        </a>
+        <div>
+            <header>
+                <span class="date">July 24</span>
+                <h3>
+                    <a href="{{ path('selene_cms_blog_post', {slug: blog.getSlug}) }}">{{ blog.getTitle }}</a>
+                </h3>
+            </header>
+            <p>
+            {{ blog.getPreview }}
+            </p>
+        </div>
+    </article>
+{% endfor %}
