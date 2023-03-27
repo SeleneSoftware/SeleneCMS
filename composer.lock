@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3d6056198d293e9ac7f47808890d66cb",
+    "content-hash": "4266870c5a3c16d4c854d19fc4bb97e9",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -2159,16 +2159,16 @@
         },
         {
             "name": "selenesoftware/cms-bundle",
-            "version": "dev-image-file",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SeleneSoftware/seleneCMSBundle.git",
-                "reference": "1096c3df1752d955c99ecf70397e1033cb839fc0"
+                "reference": "6f78ae5346d54f930391feca16435b792b7751d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/1096c3df1752d955c99ecf70397e1033cb839fc0",
-                "reference": "1096c3df1752d955c99ecf70397e1033cb839fc0",
+                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/6f78ae5346d54f930391feca16435b792b7751d7",
+                "reference": "6f78ae5346d54f930391feca16435b792b7751d7",
                 "shasum": ""
             },
             "require": {
@@ -2194,17 +2194,14 @@
                 "twig/markdown-extra": "^3.4",
                 "twig/twig": "^2.12|^3.0"
             },
+            "default-branch": true,
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
                     "Selene\\CMSBundle\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Selene\\CMSBundle\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2217,10 +2214,10 @@
             "description": "CMS platform for Symfony",
             "homepage": "https://github.com/SeleneSoftware/seleneCMSBundle",
             "support": {
-                "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/image-file",
-                "issues": "https://github.com/SeleneSoftware/seleneCMSBundle/issues"
+                "issues": "https://github.com/SeleneSoftware/seleneCMSBundle/issues",
+                "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/main"
             },
-            "time": "2023-03-27T18:09:40+00:00"
+            "time": "2023-03-22T21:49:21+00:00"
         },
         {
             "name": "symfony/asset",
