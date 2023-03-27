@@ -2163,12 +2163,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SeleneSoftware/seleneCMSBundle.git",
-                "reference": "2d5e93151083db8065d73de4b7ba03026bedcad7"
+                "reference": "1096c3df1752d955c99ecf70397e1033cb839fc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/2d5e93151083db8065d73de4b7ba03026bedcad7",
-                "reference": "2d5e93151083db8065d73de4b7ba03026bedcad7",
+                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/1096c3df1752d955c99ecf70397e1033cb839fc0",
+                "reference": "1096c3df1752d955c99ecf70397e1033cb839fc0",
                 "shasum": ""
             },
             "require": {
@@ -2220,7 +2220,7 @@
                 "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/image-file",
                 "issues": "https://github.com/SeleneSoftware/seleneCMSBundle/issues"
             },
-            "time": "2023-03-27T15:52:22+00:00"
+            "time": "2023-03-27T18:09:40+00:00"
         },
         {
             "name": "symfony/asset",
