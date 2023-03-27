@@ -19,4 +19,4 @@ yarn-error.log
 ###> Things ###
 .php-cs-fixer.cache
 *.sql
-
+/public/uploads/*
