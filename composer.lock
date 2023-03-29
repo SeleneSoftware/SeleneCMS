@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4266870c5a3c16d4c854d19fc4bb97e9",
+    "content-hash": "521b6996beb3adec1ee6bf6bf8c260c3",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -2163,12 +2163,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SeleneSoftware/seleneCMSBundle.git",
-                "reference": "6f78ae5346d54f930391feca16435b792b7751d7"
+                "reference": "21e1d199a8aaa8263392c2191ec457f24a6a62cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/6f78ae5346d54f930391feca16435b792b7751d7",
-                "reference": "6f78ae5346d54f930391feca16435b792b7751d7",
+                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/21e1d199a8aaa8263392c2191ec457f24a6a62cb",
+                "reference": "21e1d199a8aaa8263392c2191ec457f24a6a62cb",
                 "shasum": ""
             },
             "require": {
@@ -2188,7 +2188,6 @@
                 "symfony/runtime": "6.2.*",
                 "symfony/security-bundle": "6.2.*",
                 "symfony/security-csrf": "6.2.*",
-                "symfony/ux-twig-component": "^2.7",
                 "symfonycasts/reset-password-bundle": "^1.17",
                 "twig/extra-bundle": "^3.4",
                 "twig/markdown-extra": "^3.4",
@@ -2215,9 +2214,9 @@
             "homepage": "https://github.com/SeleneSoftware/seleneCMSBundle",
             "support": {
                 "issues": "https://github.com/SeleneSoftware/seleneCMSBundle/issues",
-                "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/main"
+                "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/image-file"
             },
-            "time": "2023-03-22T21:49:21+00:00"
+            "time": "2023-03-27T22:36:57+00:00"
         },
         {
             "name": "symfony/asset",
