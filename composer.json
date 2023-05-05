@@ -15,6 +15,7 @@
         "symfony/runtime": "6.2.*",
         "symfony/webpack-encore-bundle": "^1.16",
         "symfony/yaml": "6.2.*",
+        "selenesoftware/cms-bundle":"dev-comments",
         "symfony/ux-twig-component": "^2.7"
     },
     "require-dev": {
