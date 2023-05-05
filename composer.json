@@ -7,7 +7,7 @@
         "php": ">=8.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "selenesoftware/cms-bundle": "dev-main",
+        "selenesoftware/cms-bundle": "dev-10-events-pages-add-a-new-event-and-an-easy-way-to-build-out-calendars-on-the-frontend",
         "symfony/console": "6.2.*",
         "symfony/dotenv": "6.2.*",
         "symfony/flex": "^2",

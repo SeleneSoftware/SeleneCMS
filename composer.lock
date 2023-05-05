@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "521b6996beb3adec1ee6bf6bf8c260c3",
+    "content-hash": "94fd32b31c049899488133290362e9d0",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -2159,16 +2159,16 @@
         },
         {
             "name": "selenesoftware/cms-bundle",
-            "version": "dev-main",
+            "version": "dev-10-events-pages-add-a-new-event-and-an-easy-way-to-build-out-calendars-on-the-frontend",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SeleneSoftware/seleneCMSBundle.git",
-                "reference": "1bf16d90f9b0cda65e0221558ab8d75b0c698f3c"
+                "reference": "58a9de210be56d4250b44388c9f3cd73b340a75f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/1bf16d90f9b0cda65e0221558ab8d75b0c698f3c",
-                "reference": "1bf16d90f9b0cda65e0221558ab8d75b0c698f3c",
+                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/58a9de210be56d4250b44388c9f3cd73b340a75f",
+                "reference": "58a9de210be56d4250b44388c9f3cd73b340a75f",
                 "shasum": ""
             },
             "require": {
@@ -2193,7 +2193,6 @@
                 "twig/markdown-extra": "^3.4",
                 "twig/twig": "^2.12|^3.0"
             },
-            "default-branch": true,
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
@@ -2216,7 +2215,7 @@
                 "issues": "https://github.com/SeleneSoftware/seleneCMSBundle/issues",
                 "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/main"
             },
-            "time": "2023-04-10T23:53:03+00:00"
+            "time": "2023-04-16T19:11:33+00:00"
         },
         {
             "name": "symfony/asset",

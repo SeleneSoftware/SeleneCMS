@@ -11,6 +11,7 @@ import "./js/browser.min.js";
 import "breakpoints-js";
 import "./js/util.js";
 import "./js/main.js";
+import "./js/calendar.js";
 
 // require('font-awesome/css/font-awesome.css');
 
