@@ -54,11 +54,11 @@
             <section class="container box feature2">
                 <div class="row">
                     <div class="col-12 col-12-medium">
-                        {% for c in blog.getComments %}
+                        {% for c in blog.getComments|reverse %}
                             <section>
-                            <h2>c.getTitle</h2>
-                            <h3>c.getAuthor.getName</h3>
-                            <p>c.getContent</p>
+                                <h2>{{ c.getTitle }}</h2>
+                                <h3>{{ c.getAuthor.getName }}</h3>
+                                <p>{{ c.getContent }}</p>
                             </section>
                             {% endfor %}
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "09ebe8ca6348aaf8bbeca7376380c9a3",
+    "content-hash": "e22d386528a30d62361c2fa94fdc5c1a",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -2159,16 +2159,16 @@
         },
         {
             "name": "selenesoftware/cms-bundle",
-            "version": "0.0.3",
+            "version": "dev-comments",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SeleneSoftware/seleneCMSBundle.git",
-                "reference": "9bc8553cc02bf3a812f1323b4835ba99d64da5f9"
+                "reference": "a3d1908a83b748e279e6d490e1cb079a921e24c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/9bc8553cc02bf3a812f1323b4835ba99d64da5f9",
-                "reference": "9bc8553cc02bf3a812f1323b4835ba99d64da5f9",
+                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/a3d1908a83b748e279e6d490e1cb079a921e24c5",
+                "reference": "a3d1908a83b748e279e6d490e1cb079a921e24c5",
                 "shasum": ""
             },
             "require": {
@@ -2208,9 +2208,9 @@
             "homepage": "https://github.com/SeleneSoftware/seleneCMSBundle",
             "support": {
                 "issues": "https://github.com/SeleneSoftware/seleneCMSBundle/issues",
-                "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/v0.0.3"
+                "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/comments"
             },
-            "time": "2023-05-08T23:20:09+00:00"
+            "time": "2023-05-09T01:48:57+00:00"
         },
         {
             "name": "symfony/asset",
@@ -7144,7 +7144,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "selenesoftware/cms-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
