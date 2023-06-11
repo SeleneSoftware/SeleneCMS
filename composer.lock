@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af2998db82532b00cd1b0986611e2986",
+    "content-hash": "80b73a053af9d6902b5700be3251a970",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -2164,16 +2164,16 @@
         },
         {
             "name": "selenesoftware/cms-bundle",
-            "version": "dev-main",
+            "version": "dev-profile",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SeleneSoftware/seleneCMSBundle.git",
-                "reference": "d338991df576e9e879aa0c75dde560e39af5a57b"
+                "reference": "b2c6a3978600a7c912489b3219ae87d6e37c175a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/d338991df576e9e879aa0c75dde560e39af5a57b",
-                "reference": "d338991df576e9e879aa0c75dde560e39af5a57b",
+                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/b2c6a3978600a7c912489b3219ae87d6e37c175a",
+                "reference": "b2c6a3978600a7c912489b3219ae87d6e37c175a",
                 "shasum": ""
             },
             "require": {
@@ -2193,7 +2193,6 @@
                 "twig/markdown-extra": "^3.4",
                 "twig/twig": "^2.12|^3.0"
             },
-            "default-branch": true,
             "type": "symfony-bundle",
             "autoload": {
                 "psr-4": {
@@ -2214,9 +2213,9 @@
             "homepage": "https://github.com/SeleneSoftware/seleneCMSBundle",
             "support": {
                 "issues": "https://github.com/SeleneSoftware/seleneCMSBundle/issues",
-                "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/main"
+                "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/profile"
             },
-            "time": "2023-05-09T01:51:23+00:00"
+            "time": "2023-06-11T16:08:13+00:00"
         },
         {
             "name": "symfony/asset",
