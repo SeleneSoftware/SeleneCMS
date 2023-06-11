@@ -2,7 +2,7 @@
 
 namespace App\Components;
 
-use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\EntityManagerInterface;
 use Selene\CMSBundle\Traits\BlogTrait;
 use Symfony\UX\TwigComponent\Attribute\AsTwigComponent;
 
@@ -13,7 +13,7 @@ class RecentPostsComponent
 
     public $doctrine;
 
-    public function __construct(ManagerRegistry $doctrine)
+    public function __construct(EntityManagerInterface $doctrine)
     {
         $this->doctrine = $doctrine;
     }

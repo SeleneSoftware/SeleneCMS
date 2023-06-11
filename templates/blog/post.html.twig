@@ -74,7 +74,7 @@
                                 </footer>
                                 {{ form_end(commentForm)  }}
                             {% else %}
-                                <h3>Please Register or Login to Leave Comments</h3>
+                                <h3>Please <a href="{{ path('selene_cms_register') }}"">Register</a> or <a href="{{path('selene_cms_login')}}">Login</a> to Leave Comments</h3>
                             {% endif %}
                         </section>
                     </div>
