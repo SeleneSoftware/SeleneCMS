@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+<<<<<<< ours
         "@babel/core": "^7.21.4",
         "@babel/preset-env": "^7.21.4",
         "@fortawesome/fontawesome": "^1.1.8",
@@ -16,6 +17,7 @@
         "prettier": "2.6.2",
         "prettier-plugin-twig-melody": "^0.4.6",
         "regenerator-runtime": "^0.13.11",
+        "webpack": "^5.74.0",
         "webpack-cli": "^4.10.0",
         "webpack-notifier": "^1.15.0"
     },
