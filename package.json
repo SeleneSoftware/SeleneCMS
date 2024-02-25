@@ -1,21 +1,15 @@
 {
     "devDependencies": {
-        "@babel/core": "^7.21.4",
-        "@babel/preset-env": "^7.21.4",
-        "@fortawesome/fontawesome": "^1.1.8",
-        "@fortawesome/fontawesome-free": "^6.4.0",
-        "@fortawesome/free-brands-svg-icons": "^6.4.0",
-        "@fortawesome/free-regular-svg-icons": "^6.4.0",
-        "@fortawesome/free-solid-svg-icons": "^6.4.0",
-        "@hotwired/stimulus": "^3.2.1",
+        "@babel/core": "^7.17.0",
+        "@babel/preset-env": "^7.16.0",
+        "@hotwired/stimulus": "^3.0.0",
         "@hotwired/turbo": "^7.0.1",
-        "@symfony/stimulus-bridge": "^3.2.2",
+        "@symfony/stimulus-bridge": "^3.2.0",
+        "@symfony/ux-toggle-password": "file:vendor/symfony/ux-toggle-password/assets",
         "@symfony/ux-turbo": "file:vendor/symfony/ux-turbo/assets",
-        "@symfony/webpack-encore": "^4.2.0",
-        "core-js": "^3.30.1",
-        "prettier": "2.6.2",
-        "prettier-plugin-twig-melody": "^0.4.6",
-        "regenerator-runtime": "^0.13.11",
+        "@symfony/webpack-encore": "^4.0.0",
+        "core-js": "^3.23.0",
+        "regenerator-runtime": "^0.13.9",
         "webpack": "^5.74.0",
         "webpack-cli": "^4.10.0",
         "webpack-notifier": "^1.15.0"
@@ -29,12 +23,9 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "apexcharts": "^3.38.0",
+        "@fortawesome/fontawesome-free": "^6.5.1",
+        "apexcharts": "^3.45.2",
         "breakpoints-js": "^1.0.6",
-        "file-loader": "^6.2.0",
-        "jquery": "^3.6.4",
-        "node-sass": "^8.0.0",
-        "sass-embedded": "^1.62.0",
-        "sass-loader": "^13.2.2"
+        "jquery": "^3.7.1"
     }
 }

@@ -15,8 +15,3 @@
 npm-debug.log
 yarn-error.log
 ###< symfony/webpack-encore-bundle ###
-
-###> Things ###
-.php-cs-fixer.cache
-*.sql
-/public/uploads/*

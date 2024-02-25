@@ -14,7 +14,7 @@
         ]
     },
     "doctrine/doctrine-migrations-bundle": {
-        "version": "3.2",
+        "version": "3.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -27,7 +27,7 @@
         ]
     },
     "easycorp/easyadmin-bundle": {
-        "version": "4.6",
+        "version": "4.9",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -36,10 +36,10 @@
         }
     },
     "presta/sitemap-bundle": {
-        "version": "v3.3.0"
+        "version": "v4.0.0"
     },
     "symfony/console": {
-        "version": "6.2",
+        "version": "7.0",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -51,7 +51,7 @@
         ]
     },
     "symfony/flex": {
-        "version": "2.2",
+        "version": "2.4",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -81,20 +81,8 @@
             "src/Kernel.php"
         ]
     },
-    "symfony/mailer": {
-        "version": "7.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "4.3",
-            "ref": "df66ee1f226c46f01e85c29c2f7acce0596ba35a"
-        },
-        "files": [
-            "config/packages/mailer.yaml"
-        ]
-    },
     "symfony/maker-bundle": {
-        "version": "1.48",
+        "version": "1.54",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -175,14 +163,25 @@
             "branch": "main",
             "version": "7.0",
             "ref": "0df5844274d871b37fc3816c57a768ffc60a43a5"
-        },
-        "files": []
+        }
+    },
+    "symfony/ux-toggle-password": {
+        "version": "v2.14.0"
     },
     "symfony/ux-turbo": {
         "version": "v2.14.2"
     },
     "symfony/ux-twig-component": {
-        "version": "v2.7.1"
+        "version": "2.14",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "main",
+            "version": "2.13",
+            "ref": "67814b5f9794798b885cec9d3f48631424449a01"
+        },
+        "files": [
+            "config/packages/twig_component.yaml"
+        ]
     },
     "symfony/validator": {
         "version": "7.0",
@@ -194,19 +193,6 @@
         },
         "files": [
             "config/packages/validator.yaml"
-        ]
-    },
-    "symfony/web-profiler-bundle": {
-        "version": "6.2",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "main",
-            "version": "6.1",
-            "ref": "e42b3f0177df239add25373083a564e5ead4e13a"
-        },
-        "files": [
-            "config/packages/web_profiler.yaml",
-            "config/routes/web_profiler.yaml"
         ]
     },
     "symfony/webpack-encore-bundle": {
@@ -226,7 +212,7 @@
         ]
     },
     "symfonycasts/reset-password-bundle": {
-        "version": "1.17",
+        "version": "1.20",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -238,6 +224,6 @@
         ]
     },
     "twig/extra-bundle": {
-        "version": "v3.5.1"
+        "version": "v3.8.0"
     }
 }
