@@ -36,7 +36,7 @@
         }
     },
     "presta/sitemap-bundle": {
-        "version": "v4.0.0"
+        "version": "v4.1.0"
     },
     "symfony/console": {
         "version": "7.0",
@@ -82,7 +82,7 @@
         ]
     },
     "symfony/maker-bundle": {
-        "version": "1.54",
+        "version": "1.55",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -117,7 +117,7 @@
         ]
     },
     "symfony/stimulus-bundle": {
-        "version": "2.14",
+        "version": "2.15",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
@@ -166,13 +166,13 @@
         }
     },
     "symfony/ux-toggle-password": {
-        "version": "v2.14.0"
+        "version": "v2.15.0"
     },
     "symfony/ux-turbo": {
-        "version": "v2.14.2"
+        "version": "v2.15.0"
     },
     "symfony/ux-twig-component": {
-        "version": "2.14",
+        "version": "2.15",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
