@@ -17,7 +17,9 @@
         "symfony/yaml": "7.0.*"
     },
     "require-dev": {
-        "symfony/maker-bundle": "^1.54"
+        "symfony/maker-bundle": "^1.54",
+        "symfony/stopwatch": "7.0.*",
+        "symfony/web-profiler-bundle": "7.0.*"
     },
     "config": {
         "allow-plugins": {
