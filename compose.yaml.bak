@@ -3,44 +3,39 @@ services:
     image: tailscale/tailscale
     container_name: symfony_tailscale
     environment:
-      - TS_AUTHKEY=tskey-auth-kyANJf5LEP11CNTRL-Xfqg2tNmM3LxDJzPABBbxKVDpzPzR8cG
+      - TS_AUTHKEY=tskey-auth-kyANJf5LEP11CNTRL-Xfqg2tNmM3LxDJzPABBbxKVDpzPzR8cG  # Tailscale auth key to authenticate
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
-    network_mode: "host"  # You can leave this to use the host network for Tailscale
+    network_mode: "host"  # Allows Tailscale to connect directly to the host network
     volumes:
       - /var/lib/tailscale:/var/lib/tailscale
     command: tailscaled
 
   nginx:
     image: nginx:latest
-    user: "www-data:www-data"
     container_name: symfony_nginx
     ports:
       - "80:80"
-      - "443:443"
     volumes:
-      - ./nginx:/etc/nginx
-      - .:/var/www/symfony
-      - ./php-fpm.sock:/var/run/php-fpm.sock:rw
-      - ./var/cache/nginx:/var/cache/nginx
-      - ./var/log/nginx:/var/log/nginx
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./symfony:/var/www/symfony
     depends_on:
       - php
+    network_mode: "service:tailscale"  # Use Tailscale's network
 
   php:
-    image: php:8.3-fpm
-    user: "www-data"
+    image: php:8.2-fpm
     container_name: symfony_php
     volumes:
-      - .:/var/www/symfony
+      - ./symfony:/var/www/symfony
       - ./php/php.ini:/usr/local/etc/php/php.ini
-      - ./php-fpm.sock:/var/run/php-fpm.sock
     working_dir: /var/www/symfony
     environment:
       - APP_ENV=dev
     depends_on:
       - mysql
+    network_mode: "service:tailscale"  # Use Tailscale's network
 
   mysql:
     image: mysql:8.0
@@ -54,12 +49,14 @@ services:
       - mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
+    network_mode: "service:tailscale"  # Use Tailscale's network
 
   redis:
     image: redis:alpine
     container_name: symfony_redis
     ports:
       - "6379:6379"
+    network_mode: "service:tailscale"  # Use Tailscale's network
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
@@ -72,17 +69,16 @@ services:
       - es_data:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"
+    network_mode: "service:tailscale"  # Use Tailscale's network
 
   mailhog:
     image: mailhog/mailhog
     container_name: symfony_mailhog
     ports:
       - "8025:8025"
+    network_mode: "service:tailscale"  # Use Tailscale's network
 
 volumes:
   mysql_data:
   es_data:
-  nginx:
-    driver: local
-  php-fpm-sock:
-    driver: local
+
