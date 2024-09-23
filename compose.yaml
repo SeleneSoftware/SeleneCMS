@@ -14,33 +14,37 @@ services:
 
   nginx:
     image: nginx:latest
-    user: "www-data:www-data"
+    # user: "nginx"
     container_name: symfony_nginx
     ports:
       - "80:80"
       - "443:443"
     volumes:
       - ./nginx:/etc/nginx
-      - .:/var/www/symfony
-      - ./php-fpm.sock:/var/run/php-fpm.sock:rw
+      - .:/var/www/symfony:rw
+      # - ./php-fpm.sock:/var/run/php-fpm.sock:rw
       - ./var/cache/nginx:/var/cache/nginx
       - ./var/log/nginx:/var/log/nginx
     depends_on:
       - php
+    networks:
+      - app-network
 
   php:
     image: php:8.3-fpm
-    user: "www-data"
+    # user: "nginx"
     container_name: symfony_php
     volumes:
-      - .:/var/www/symfony
+      - .:/var/www/symfony:rw
       - ./php/php.ini:/usr/local/etc/php/php.ini
-      - ./php-fpm.sock:/var/run/php-fpm.sock
+      # - ./php-fpm.sock:/var/run/php-fpm.sock
     working_dir: /var/www/symfony
     environment:
       - APP_ENV=dev
     depends_on:
       - mysql
+    networks:
+      - app-network
 
   mysql:
     image: mysql:8.0
@@ -54,12 +58,16 @@ services:
       - mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
+    networks:
+      - app-network
 
   redis:
     image: redis:alpine
     container_name: symfony_redis
     ports:
       - "6379:6379"
+    networks:
+      - app-network
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
@@ -72,12 +80,16 @@ services:
       - es_data:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"
+    networks:
+      - app-network
 
   mailhog:
     image: mailhog/mailhog
     container_name: symfony_mailhog
     ports:
       - "8025:8025"
+    networks:
+      - app-network
 
 volumes:
   mysql_data:
@@ -86,3 +98,7 @@ volumes:
     driver: local
   php-fpm-sock:
     driver: local
+
+networks:
+  app-network:
+    driver: bridge
