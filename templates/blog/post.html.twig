@@ -1,0 +1,100 @@
+{% extends 'base.post.html.twig' %}
+
+{% block title %}
+    | {{ blog.getTitle }}
+{% endblock %}
+
+{% block metadescription %}
+    <meta name="description" content="{{blog.getPreview|striptags }}">
+{% endblock %}
+
+{% block heroimage %}
+    <img src="{{ blog.getImageFile.getImageFile }}" class="full-bleed">
+{% endblock %}
+
+{% block container1 %}
+    <h1>{{ blog.getTitle }}</h1>
+    <h2>Written By: {{ blog.getAuthor }}</h2>
+    {{ blog.getContent|raw }}
+{% endblock %}
+
+{% block comments %}
+    <div id="comments" class="full-bleed">
+        <div class="content">
+            <h3>Comments</h3>
+            {% for comment in blog.getComments %}
+                {% if comment.getPublic %}
+                    <div class="comment">
+                        <span class="comment-email">{{ comment.getAuthor.getEmail }}</span>
+                        <p class="title">{{ comment.getTitle }}</p>
+                        <p>{{ comment.getContent }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+            {% if app.user %}
+                <div class="form">
+                    {{ form_start(commentForm) }}
+                    <div class="my-custom-class-for-errors">
+                        {{ form_errors(commentForm) }}
+                    </div>
+
+                    <div class="form-control">
+
+                        <div>{{ form_label(commentForm.title, 'Comment Title') }}</div>
+                        <div>{{ form_widget(commentForm.title) }}</div>
+                        <small>{{ form_help(commentForm.title) }}</small>
+
+                        <div>{{ form_label(commentForm.content, 'Your Comment') }}</div>
+                        <div>{{ form_widget(commentForm.content) }}</div>
+                        <small>{{ form_help(commentForm.content) }}</small>
+
+                        <div class="form-error">
+                            {{ form_errors(commentForm.content) }}
+                        </div>
+
+                        <div class="form-submit">
+                            {{ form_widget(commentForm.submit) }}
+                        </div>
+
+                    </div>
+                    {{ form_end(commentForm) }}
+                </div>
+
+            {% else %}
+                <span>Account needed to comment</span>
+                <a class="login" href="{{ path('selene_cms_login') }}">Login</a> or <a class="login" href="{{ path('selene_cms_register') }}">Register</a>
+            {% endif %}
+
+                    {% apply sharethisplacement_content %}
+                    <div class="sharethis-inline-share-buttons"></div>
+                    {% endapply %}
+
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block buckets %}
+    <section class="buckets grid full-bleed">
+        <ul>
+            {% for b in blogs|slice(0, 3) %}
+                <li>
+                    <a href="{{ path('selene_cms_blog_post', {slug: b.getSlug}) }}">
+                        <img src="{{ b.getImageFile.getImageFile }}"
+                             alt="{{ b.getImageFile.getName }}" />
+                        <div class="bucket">
+                            <h3 class="bucket-title">
+                                {{ b.getTitle }}
+                            </h3>
+                            <p>
+                            {{ b.getPreview }}
+                            </p>
+                        </div>
+                        <!-- .bucket -->
+                </li>
+                    </a>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

@@ -18,84 +18,95 @@
                 <!-- Header -->
                 <section id="header">
 
+                    {% block logo %}
                     <!-- Logo -->
                     <h1><a href="{{ path('app_default') }}">{% apply title_content %}Dopetrope{% endapply %}</a></h1>
+                    {% endblock %}
 
-                    <!-- Nav -->
-                    <nav id="nav">
-                        <ul>
-                            <li class="current"><a href="{{ path('app_default') }}">Home</a></li>
-                            <li>
-                                <a href="#">Dropdown</a>
+                    {% block nav %}
+                        {# the js that runs the dropdown does not like to work.  So I'm putting in a toggle to turn it on or off. #}
+                        {% if getSetting('navBar') %}
+                            <!-- Nav -->
+                            <nav id="nav">
                                 <ul>
-                                    <li><a href="#">Lorem ipsum dolor</a></li>
-                                    <li><a href="#">Magna phasellus</a></li>
-                                    <li><a href="#">Etiam dolore nisl</a></li>
+                                    <li class="current"><a href="{{ path('app_default') }}">Home</a></li>
                                     <li>
-                                        <a href="#">Phasellus consequat</a>
+                                        <a href="#">Dropdown</a>
                                         <ul>
+                                            <li><a href="#">Lorem ipsum dolor</a></li>
                                             <li><a href="#">Magna phasellus</a></li>
                                             <li><a href="#">Etiam dolore nisl</a></li>
+                                            <li>
+                                                <a href="#">Phasellus consequat</a>
+                                                <ul>
+                                                    <li><a href="#">Magna phasellus</a></li>
+                                                    <li><a href="#">Etiam dolore nisl</a></li>
+                                                    <li><a href="#">Veroeros feugiat</a></li>
+                                                    <li><a href="#">Nisl sed aliquam</a></li>
+                                                    <li><a href="#">Dolore adipiscing</a></li>
+                                                </ul>
+                                            </li>
                                             <li><a href="#">Veroeros feugiat</a></li>
-                                            <li><a href="#">Nisl sed aliquam</a></li>
-                                            <li><a href="#">Dolore adipiscing</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Veroeros feugiat</a></li>
+                                    <li><a href="left-sidebar.html">Left Sidebar</a></li>
+                                    <li><a href="right-sidebar.html">Right Sidebar</a></li>
+                                    <li><a href="no-sidebar.html">No Sidebar</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                            <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                            <li><a href="no-sidebar.html">No Sidebar</a></li>
-                        </ul>
-                    </nav>
+                            </nav>
+                        {% endif %}
+                    {% endblock %}
 
-                    <!-- Banner -->
-                    <section id="banner" style="background: #CCE8F4 url('{{ asset('images/pic01.jpg') }}')">
-                        <header>
-                            <h2>Howdy. This is Dopetrope.</h2>
-                            <p>A responsive template by HTML5 UP</p>
-                        </header>
-                    </section>
+                    {% block banner %}
+                        <!-- Banner -->
+                        <section id="banner" style="background: #CCE8F4 url('{{ asset('images/pic01.jpg') }}')">
+                            <header>
+                                <h2>Howdy. This is Dopetrope.</h2>
+                                <p>A responsive template by HTML5 UP</p>
+                            </header>
+                        </section>
+                    {% endblock %}
 
-                    <!-- Intro -->
-                    <section id="intro" class="container">
-                        <div class="row">
-                            <div class="col-4 col-12-medium">
-                                <section class="first">
-                                    <i class="icon solid featured fa-cog"></i>
-                                    <header>
-                                        <h2>Ipsum consequat</h2>
-                                    </header>
-                                    <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-                                </section>
+                    {% block intro %}
+                        <!-- Intro -->
+                        <section id="intro" class="container">
+                            <div class="row">
+                                <div class="col-4 col-12-medium">
+                                    <section class="first">
+                                        <i class="icon solid featured fa-cog"></i>
+                                        <header>
+                                            <h2>Ipsum consequat</h2>
+                                        </header>
+                                        <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+                                    </section>
+                                </div>
+                                <div class="col-4 col-12-medium">
+                                    <section class="middle">
+                                        <i class="icon solid featured alt fa-bolt"></i>
+                                        <header>
+                                            <h2>Magna etiam dolor</h2>
+                                        </header>
+                                        <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+                                    </section>
+                                </div>
+                                <div class="col-4 col-12-medium">
+                                    <section class="last">
+                                        <i class="icon solid featured alt2 fa-star"></i>
+                                        <header>
+                                            <h2>Tempus adipiscing</h2>
+                                        </header>
+                                        <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
+                                    </section>
+                                </div>
                             </div>
-                            <div class="col-4 col-12-medium">
-                                <section class="middle">
-                                    <i class="icon solid featured alt fa-bolt"></i>
-                                    <header>
-                                        <h2>Magna etiam dolor</h2>
-                                    </header>
-                                    <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-                                </section>
-                            </div>
-                            <div class="col-4 col-12-medium">
-                                <section class="last">
-                                    <i class="icon solid featured alt2 fa-star"></i>
-                                    <header>
-                                        <h2>Tempus adipiscing</h2>
-                                    </header>
-                                    <p>Nisl amet dolor sit ipsum veroeros sed blandit consequat veroeros et magna tempus.</p>
-                                </section>
-                            </div>
-                        </div>
-                        <footer>
-                            <ul class="actions">
-                                <li><a href="#" class="button large">Get Started</a></li>
-                                <li><a href="#" class="button alt large">Learn More</a></li>
-                            </ul>
-                        </footer>
-                    </section>
+                            <footer>
+                                <ul class="actions">
+                                    <li><a href="#" class="button large">Get Started</a></li>
+                                    <li><a href="#" class="button alt large">Learn More</a></li>
+                                </ul>
+                            </footer>
+                        </section>
+                    {% endblock %}
 
                 </section>
             {% endblock %}
@@ -107,6 +118,7 @@
                         <div class="row">
                             <div class="col-12">
 
+                                {% block portfolio %}
                                 <!-- Portfolio -->
                                 <section>
                                     <header class="major">
@@ -199,10 +211,12 @@
                                         </div>
                                     </div>
                                 </section>
+                                {% endblock %}
 
                             </div>
                             <div class="col-12">
 
+                                {% block blog %}
                                 <!-- Blog -->
                                 <section>
                                     <header class="major">
@@ -243,6 +257,7 @@
                                         </div>
                                     </div>
                                 </section>
+                                {% endblock %}
 
                             </div>
                         </div>

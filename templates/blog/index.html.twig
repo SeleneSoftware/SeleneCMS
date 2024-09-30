@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }} | Blog
+{% endblock %}
+
+{% block intro %}
+{% endblock %}
+{% block banner %}
+{% endblock %}
+
+{% block portfolio %}
+{% endblock %}
+
+{% block blog %}
+    <!-- Blog -->
+    <section>
+        <header class="major">
+            <h2>The Blog</h2>
+        </header>
+
+        <div class="row">
+
+
+
+            {% for b in blogs|reverse %}
+            <div class="col-6 col-12-small">
+                <section class="box">
+                    <a href="{{ path('selene_cms_blog_post', {slug: b.getSlug}) }}" class="image featured"><img src="{{ b.getImageFile.getImageFile|default('https://source.unsplash.com/collection/325867/800x600') }}" alt="{{ b.getImageFile.getName }}" /></a>
+                    <header>
+                        <h3>{{ b.getTitle }}</h3>
+                        <p>Posted 45 minutes ago</p>
+                    </header>
+                    <p>{{ b.getPreview }}</p>
+                    <footer>
+                        <ul class="actions">
+                            <li><a href="{{ path('selene_cms_blog_post', {slug: b.getSlug}) }}" class="button icon solid fa-file-alt">Continue Reading</a></li>
+                            {# Soon I shall have a comment count.  Not now.
+                            <li><a href="#" class="button alt icon solid fa-comment">33 comments</a></li>
+                            #}
+                        </ul>
+                    </footer>
+                </section>
+            </div>
+            {% endfor %}
+
+
+
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block main2 %}
+    <div class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
+
+        <!--Posts Container-->
+        <div class="flex flex-wrap justify-between pt-12 -mx-6">
+            <!--2/3 col -->
+
+            {% set b = blogs|last %}
+            <div class="w-full md:w-2/3 p-6 flex flex-col flex-grow flex-shrink">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                    <a href="{{ path('selene_cms_blog_post', {slug: b.getSlug}) }}" class="flex flex-wrap no-underline hover:no-underline">
+                        <img src="{{ b.getImageFile.getImageFile|default('https://source.unsplash.com/collection/325867/800x600') }}" alt="{{ b.getImageFile.getName }}" class="h-full w-full rounded-t pb-6">
+                        <div class="w-full font-bold text-xl text-gray-900 px-6">{{ b.getTitle }}</div>
+                        <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                        {{ b.getPreview }}
+                        </p>
+                    </a>
+                </div>
+                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                    <div class="flex items-center justify-between">
+                        <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="{{ b.getAuthor.getName }}" src="{{ gravatar(b.getAuthor.getEmail) }}" alt="Avatar of {{ b.getAuthor.getName }}">
+                    </div>
+                </div>
+            </div>
+
+            {% for b in blogs|reverse|slice(1, 1) %}
+                <!--1/3 col -->
+                <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                        <a href="{{ path('selene_cms_blog_post', {slug: b.getSlug}) }}" class="flex flex-wrap no-underline hover:no-underline">
+                            <img src="{{ b.getImageFile.getImageFile|default('https://source.unsplash.com/collection/325867/800x600') }}" alt="{{ b.getImageFile.getName }}" class="h-full w-full rounded-t pb-6">
+                            <div class="w-full font-bold text-xl text-gray-900 px-6">{{ b.getTitle }}</div>
+                            <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                            {{ b.getPreview }}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                        <div class="flex items-center justify-between">
+                            <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="{{ b.getAuthor.getName }}" src="{{ gravatar(b.getAuthor.getEmail) }}" alt="Avatar of {{ b.getAuthor.getName }}">
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+
+            {% for b in blogs|reverse|slice(2) %}
+                <!--1/2 col -->
+                <div class="w-full md:w-1/2 p-6 flex flex-col flex-grow flex-shrink">
+                    <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
+                        <a href="{{ path('selene_cms_blog_post', {slug: b.getSlug}) }}" class="flex flex-wrap no-underline hover:no-underline">
+                            <img src="{{ b.getImageFile.getImageFile|default('https://source.unsplash.com/collection/325867/800x600') }}" alt="{{ b.getImageFile.getName }}" class="h-full w-full rounded-t pb-6">
+                            <div class="w-full font-bold text-xl text-gray-900 px-6">{{ b.getTitle }}</div>
+                            <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                            {{ b.getPreview }}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
+                        <div class="flex items-center justify-between">
+                            <img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="{{ b.getAuthor.getName }}" src="{{ gravatar(b.getAuthor.getEmail) }}" alt="Avatar of {{ b.getAuthor.getName }}">
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+    </div>
+{% endblock %}
