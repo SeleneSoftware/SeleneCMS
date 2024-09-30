@@ -16,14 +16,14 @@ return [
         'path' => './assets/app.js',
         'entrypoint' => true,
     ],
-    '@hotwired/stimulus' => [
-        'version' => '3.2.2',
-    ],
     '@symfony/stimulus-bundle' => [
         'path' => './vendor/symfony/stimulus-bundle/assets/dist/loader.js',
     ],
+    '@hotwired/stimulus' => [
+        'version' => '3.2.2',
+    ],
     '@hotwired/turbo' => [
-        'version' => '7.3.0',
+        'version' => '8.0.10',
     ],
     '@fortawesome/fontawesome-free' => [
         'version' => '6.6.0',
@@ -31,5 +31,11 @@ return [
     '@fortawesome/fontawesome-free/css/fontawesome.min.css' => [
         'version' => '6.6.0',
         'type' => 'css',
+    ],
+    'jquery' => [
+        'version' => '3.7.1',
+    ],
+    'breakpoints-js' => [
+        'version' => '1.0.6',
     ],
 ];

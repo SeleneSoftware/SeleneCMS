@@ -16,4 +16,5 @@ return [
     Eckinox\TinymceBundle\TinymceBundle::class => ['all' => true],
     EasyCorp\Bundle\EasyAdminBundle\EasyAdminBundle::class => ['all' => true],
     Symfony\Bundle\MakerBundle\MakerBundle::class => ['dev' => true],
+    Selene\CMSBundle\seleneCMSBundle::class => ['all' => true,]
 ];
