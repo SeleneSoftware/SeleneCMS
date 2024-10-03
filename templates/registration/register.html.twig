@@ -1,0 +1,90 @@
+{% extends 'security/login.html.twig' %}
+
+{% block main %}
+    <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded" style="background-image:url('{% apply dankalley_image %}https://source.unsplash.com/collection/1118905/{% endapply %}'); height: 40vh;"></div>
+
+    <div class="container max-w-5xl mx-auto -mt-32">
+
+        <div class="mx-0 sm:mx-6">
+
+            <div class="bg-white w-full p-8 md:p-24 text-xl md:text-2xl text-gray-800 leading-normal" style="font-family:Georgia,serif;">
+
+                <p class="text-2xl md:text-3xl mb-5">{% apply registerFormTitle_content %}Login In!{% endapply %}</p>
+                {% for flash_error in app.flashes('verify_email_error') %}
+                    <p class="py-6 text-pink-600">
+                    {{ flash_error  }}
+                    </p>
+                {% endfor %}
+
+                {% if app.user %}
+                    <p class="py6">
+                    You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                    </p>
+                {% endif %}
+
+                {{ form_start(registrationForm, { 'attr' : { 'class': 'w-full max-w-sm' } }) }}
+                <div class="md:flex md:items-center mb-6">
+                    <div class="md:w-1/3">
+
+                        {{ form_label(registrationForm.name, 'Full Name', {'label_attr': {'class': 'block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4'}}) }}
+                    </div>
+                    <div class="md:w-2/3">
+                        {{
+                        form_widget(
+                        registrationForm.name,
+                        { 'attr': {'class': 'bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500'} }
+                        )
+                        }}
+                    </div>
+                </div>
+
+                <div class="md:flex md:items-center mb-6">
+                    <div class="md:w-1/3">
+
+                        {{ form_label(registrationForm.email, 'Email Address', {'label_attr': {'class': 'block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4'}}) }}
+                    </div>
+                    <div class="md:w-2/3">
+                        {{
+                        form_widget(
+                        registrationForm.email,
+                        { 'attr': {'class': 'bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500'} }
+                        )
+                        }}
+                    </div>
+                </div>
+
+                <div class="md:flex md:items-center mb-6">
+                    <div class="md:w-1/3">
+
+                        {{ form_label(registrationForm.plainPassword, 'Password', {'label_attr': {'class': 'block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4'}}) }}
+                    </div>
+                    <div class="md:w-2/3">
+                        {{
+                        form_widget(
+                        registrationForm.plainPassword,
+                        { 'attr': {'class': 'bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500'} }
+                        )
+                        }}
+                    </div>
+                </div>
+
+                <div class="md:flex md:items-center mb-6">
+                    <div class="md:w-1/3"></div>
+                    <label class="md:w-2/3 block text-gray-500 font-bold">
+                        {{ form_widget(registrationForm.agreeTerms, {'attr':{'class':'mr-2 leading-tight'}}) }}
+                        <span class="text-sm">
+                            Remember Me
+                        </span>
+                    </label>
+                </div>
+                <div class="md:flex md:items-center">
+                    <div class="md:w-1/3"></div>
+                    <div class="md:w-2/3">
+                        <input type="submit" class="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded" type="button" value="Login" />
+                    </div>
+                </div>
+                {{ form_end(registrationForm) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

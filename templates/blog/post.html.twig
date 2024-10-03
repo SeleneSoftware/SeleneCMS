@@ -1,8 +1,6 @@
-{% extends 'base.post.html.twig' %}
+{% extends 'base.html.twig' %}
 
-{% block title %}
-    | {{ blog.getTitle }}
-{% endblock %}
+{% block title %}{% apply title_content %}Welcome!{% endapply %} | {{ blog.getTitle }}{% endblock %}
 
 {% block metadescription %}
     <meta name="description" content="{{blog.getPreview|striptags }}">
