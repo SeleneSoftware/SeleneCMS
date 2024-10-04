@@ -13,7 +13,7 @@ class DefaultController extends BlogController
     public function index(EntityManagerInterface $doctrine): Response
     {
         return $this->render('default/index.html.twig', [
-            'recentBlogs' => $this->getBlogList($doctrine, 3),
+            'recentBlogs' => array_reverse($this->getBlogList($doctrine, 6)),
         ]);
     }
 }
