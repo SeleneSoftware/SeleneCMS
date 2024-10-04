@@ -7,9 +7,80 @@
     {{ importmap('app') }}
 {% endblock %}
 
+{% block banner %}
+{% endblock %}
+{% block intro %}
+{% endblock %}
 
 
 {% block main %}
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+
+                    <section id="intro" class="container">
+                        <header class="major">
+                            <h2>{% apply loginTitle_content %}Login{% endapply %}</h2>
+                        </header>
+
+                        {% if error %}
+                            <p class="py-6 text-pink-600">
+                            {{ error.messageKey|trans(error.messageData, 'security') }}
+                            </p>
+                        {% endif %}
+
+                        {% if app.user %}
+                            <p class="py6">
+                            You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
+                            </p>
+                        {% endif %}
+
+                        <footer>
+                            <form method="POST">
+                                <ul class="actions">
+
+                                    <li>
+                                        <input type="email"
+                                               value="{{ last_username }}"
+                                               name="email"
+                                               id="inputEmail"
+                                               class=""
+                                               autocomplete="email"
+                                               required
+                                               placeholder="Email Address"
+                                               autofocus />
+                                    </li>
+                                    <li>
+                                        <input type="password"
+                                               name="password"
+                                               id="inputPassword"
+                                               class=""
+                                               autocomplete="current-password"
+                                               placeholder="******************"
+                                               required />
+                                        <input type="hidden"
+                                               name="_csrf_token"
+                                               value="{{ csrf_token('authenticate') }}" />
+                                    </li>
+                                    <li>
+                                        <button type="submit" class="button large">Submit</button>
+                                    </li>
+                                </ul>
+                            </form>
+                        </footer>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+
+{% block main2 %}
     <div class="container w-full max-w-6xl mx-auto bg-white bg-cover mt-8 rounded" style="background-image:url('{% apply dankalley_image %}https://source.unsplash.com/collection/1118905/{% endapply %}'); height: 40vh;"></div>
 
     <div class="container max-w-5xl mx-auto -mt-32">

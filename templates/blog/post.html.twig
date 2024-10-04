@@ -1,10 +1,12 @@
-{% extends 'base.html.twig' %}
+{% extends 'base.post.html.twig' %}
+
 
 {% block title %}{% apply title_content %}Welcome!{% endapply %} | {{ blog.getTitle }}{% endblock %}
 
 {% block metadescription %}
     <meta name="description" content="{{blog.getPreview|striptags }}">
 {% endblock %}
+
 
 {% block heroimage %}
     <img src="{{ blog.getImageFile.getImageFile }}" class="full-bleed">
