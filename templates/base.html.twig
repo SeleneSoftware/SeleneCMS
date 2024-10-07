@@ -254,11 +254,27 @@
                                         <h2>{% apply socilaMediaCTA_content %}Social Media{% endapply %}</h2>
                                     </header>
                                     <ul class="social">
-                                        <li><a class="icon brands fa-facebook-f" href="#"><span class="label">Facebook</span></a></li>
-                                        <li><a class="icon brands fa-twitter" href="#"><span class="label">X / Twitter</span></a></li>
-                                        <li><a class="icon brands fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
-                                        <li><a class="icon brands fa-tumblr" href="#"><span class="label">Tumblr</span></a></li>
-                                        <li><a class="icon brands fa-linkedin-in" href="#"><span class="label">LinkedIn</span></a></li>
+
+                                        {% if getSetting('facebook') %}
+                                            <li><a class="icon brands fa-facebook-f" href="{% apply facebookURL_content %}#{% endapply %}"><span class="label">Facebook</span></a></li>
+                                        {% endif %}
+
+                                        {% if getSetting('twitter') %}
+                                        <li><a class="icon brands fa-x-twitter" href="{% apply twitterURL_content %}#{% endapply %}"><span class="label">X / Twitter</span></a></li>
+                                        {% endif %}
+
+                                        {% if getSetting('instagram') %}
+                                        <li><a class="icon brands fa-instagram" href="{% apply instagramURL_content %}#{% endapply %}"><span class="label">Dribbble</span></a></li>
+                                        {% endif %}
+
+                                        {% if getSetting('youtube') %}
+                                        <li><a class="icon brands fa-youtube" href="{% apply youtubeURL_content %}#{% endapply %}"><span class="label">Tumblr</span></a></li>
+                                        {% endif %}
+
+                                        {% if getSetting('linkedin') %}
+                                        <li><a class="icon brands fa-linkedin-in" href="{% apply linkedinURL_content %}#{% endapply %}"><span class="label">LinkedIn</span></a></li>
+                                        {% endif %}
+
                                     </ul>
                                     <ul class="contact">
                                         {% if  getSetting('address') %}
