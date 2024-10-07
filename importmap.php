@@ -38,4 +38,8 @@ return [
     'breakpoints-js' => [
         'version' => '1.0.6',
     ],
+    '@fortawesome/fontawesome-free/css/all.css' => [
+        'version' => '6.6.0',
+        'type' => 'css',
+    ],
 ];
