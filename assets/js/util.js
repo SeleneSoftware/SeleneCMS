@@ -9,7 +9,7 @@ import $ from 'jquery';
 	$.fn.navList = function() {
 
 		var	$this = $(this);
-			$a = $this.find('a'),
+	var		$a = $this.find('a'),
 			b = [];
 
 		$a.each(function() {

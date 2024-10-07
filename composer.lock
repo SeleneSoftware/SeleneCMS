@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0024cc5f482fb08c0dcffa8ace2769cd",
+    "content-hash": "ffdc200f3a4496802143c4d99d999ebd",
     "packages": [
         {
             "name": "composer/semver",
@@ -1718,24 +1718,24 @@
         },
         {
             "name": "nette/schema",
-            "version": "v1.3.0",
+            "version": "v1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/schema.git",
-                "reference": "a6d3a6d1f545f01ef38e60f375d1cf1f4de98188"
+                "reference": "da801d52f0354f70a638673c4a0f04e16529431d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/schema/zipball/a6d3a6d1f545f01ef38e60f375d1cf1f4de98188",
-                "reference": "a6d3a6d1f545f01ef38e60f375d1cf1f4de98188",
+                "url": "https://api.github.com/repos/nette/schema/zipball/da801d52f0354f70a638673c4a0f04e16529431d",
+                "reference": "da801d52f0354f70a638673c4a0f04e16529431d",
                 "shasum": ""
             },
             "require": {
                 "nette/utils": "^4.0",
-                "php": "8.1 - 8.3"
+                "php": "8.1 - 8.4"
             },
             "require-dev": {
-                "nette/tester": "^2.4",
+                "nette/tester": "^2.5.2",
                 "phpstan/phpstan-nette": "^1.0",
                 "tracy/tracy": "^2.8"
             },
@@ -1774,9 +1774,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/schema/issues",
-                "source": "https://github.com/nette/schema/tree/v1.3.0"
+                "source": "https://github.com/nette/schema/tree/v1.3.2"
             },
-            "time": "2023-12-11T11:54:22+00:00"
+            "time": "2024-10-06T23:10:23+00:00"
         },
         {
             "name": "nette/utils",
@@ -2184,16 +2184,16 @@
         },
         {
             "name": "selenesoftware/cms-bundle",
-            "version": "dev-v12-profile",
+            "version": "dev-v12-reset-password",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SeleneSoftware/seleneCMSBundle.git",
-                "reference": "22385a8b46d686a549bade678038dbb6cefed635"
+                "reference": "aed62d099fae7344c26c1bdb2daf3d69919e67ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/22385a8b46d686a549bade678038dbb6cefed635",
-                "reference": "22385a8b46d686a549bade678038dbb6cefed635",
+                "url": "https://api.github.com/repos/SeleneSoftware/seleneCMSBundle/zipball/aed62d099fae7344c26c1bdb2daf3d69919e67ea",
+                "reference": "aed62d099fae7344c26c1bdb2daf3d69919e67ea",
                 "shasum": ""
             },
             "require": {
@@ -2213,7 +2213,7 @@
                 "symfony/ux-toggle-password": "^2.18",
                 "symfony/ux-turbo": "^2.18",
                 "symfony/ux-twig-component": "^2.18",
-                "symfonycasts/reset-password-bundle": "^1.17",
+                "symfonycasts/reset-password-bundle": "^1.22",
                 "twig/extra-bundle": "^3.4",
                 "twig/markdown-extra": "^3.4",
                 "twig/twig": "^2.12|^3.0"
@@ -2238,9 +2238,9 @@
             "homepage": "https://github.com/SeleneSoftware/seleneCMSBundle",
             "support": {
                 "issues": "https://github.com/SeleneSoftware/seleneCMSBundle/issues",
-                "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/v12-profile"
+                "source": "https://github.com/SeleneSoftware/seleneCMSBundle/tree/v12-reset-password"
             },
-            "time": "2024-10-04T00:26:13+00:00"
+            "time": "2024-10-07T14:56:58+00:00"
         },
         {
             "name": "symfony/asset",
@@ -3561,21 +3561,24 @@
         },
         {
             "name": "symfony/flex",
-            "version": "v2.4.6",
+            "version": "v2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/flex.git",
-                "reference": "4dc11919791f81d087a12db2ab4c7e044431ef6b"
+                "reference": "92f4fba342161ff36072bd3b8e0b3c6c23160402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/flex/zipball/4dc11919791f81d087a12db2ab4c7e044431ef6b",
-                "reference": "4dc11919791f81d087a12db2ab4c7e044431ef6b",
+                "url": "https://api.github.com/repos/symfony/flex/zipball/92f4fba342161ff36072bd3b8e0b3c6c23160402",
+                "reference": "92f4fba342161ff36072bd3b8e0b3c6c23160402",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2.1",
                 "php": ">=8.0"
+            },
+            "conflict": {
+                "composer/semver": "<1.7.2"
             },
             "require-dev": {
                 "composer/composer": "^2.1",
@@ -3606,7 +3609,7 @@
             "description": "Composer plugin for Symfony",
             "support": {
                 "issues": "https://github.com/symfony/flex/issues",
-                "source": "https://github.com/symfony/flex/tree/v2.4.6"
+                "source": "https://github.com/symfony/flex/tree/v2.4.7"
             },
             "funding": [
                 {
@@ -3622,7 +3625,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-04-27T10:22:22+00:00"
+            "time": "2024-10-07T08:51:54+00:00"
         },
         {
             "name": "symfony/form",

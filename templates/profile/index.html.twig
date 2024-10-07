@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block banner %}
+{% endblock %}
+{% block intro %}
+{% endblock %}
+
+{% block main %}
+    <section id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+
+                    <section id="intro" class="container">
+                        <header class="major">
+                            <h2>{% apply loginTitle_content %}Login{% endapply %}</h2>
+                        </header>
+
+                        <footer>
+                            {{ form_start(form) }}
+                                <ul class="actions">
+
+                                    <li>
+                                        {{ form_widget(form.name) }}
+                                    </li>
+                                    <li>
+                                        {{ form_widget(form.email) }}
+                                    </li>
+                                    <li>
+                                        {{ form_widget(form.plainPassword, {'attr':{'placeholder':'Change Password'}}) }}
+                                    </li>
+                                    <li>
+                                        <button type="submit" class="button large">Submit</button>
+                                    </li>
+                                </ul>
+                                {{ form_end(form) }}
+                        </footer>
+
+                    </section>
+
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

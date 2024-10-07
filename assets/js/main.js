@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import breakpoints from 'breakpoints-js';
 
 /*
 	Dopetrope by HTML5 UP
