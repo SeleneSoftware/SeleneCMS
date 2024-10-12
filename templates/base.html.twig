@@ -32,6 +32,8 @@
                             <nav id="nav">
                                 <ul>
                                     <li class="current"><a href="{{ path('app_default') }}">Home</a></li>
+                                    {# I want to keep the dropdown atuff here so I can use it later.  But it's still commented out.
+                                    I'm also going to make the navbar the same as the footer as a component to edit in the dashboard.  v0.13
                                     <li>
                                         <a href="#">Dropdown</a>
                                         <ul>
@@ -51,9 +53,19 @@
                                             <li><a href="#">Veroeros feugiat</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                                    <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                                    <li><a href="no-sidebar.html">No Sidebar</a></li>
+                                    #}
+                                    {% if app.user %}
+                                        {% if is_granted('ROLE_ADMIN') %}
+                                            <li><a href="{{ path('selene_cms_admin') }}">Admin Dashboard</a></li>
+                                            {% endif %}
+                                        <li><a href="{{ path('selene_cms_profile') }}">Profile</a></li>
+                                        <li><a href="{{ path('selene_cms_logout') }}">Log Out</a></li>
+
+                                        {% else %}
+                                        <li><a href="{{ path('selene_cms_login') }}">Login</a></li>
+                                        <li><a href="{{ path('selene_cms_register') }}">Register</a></li>
+                                        {% endif %}
+                                        <li><a href="{{ path('selene_cms_blog') }}">Blog</a></li>
                                 </ul>
                             </nav>
                         {% endif %}
