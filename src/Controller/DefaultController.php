@@ -16,4 +16,14 @@ class DefaultController extends BlogController
             // 'recentBlogs' => array_reverse($this->getBlogList($doctrine, 6)),
         ]);
     }
+
+    #[Route('/about-us', name: 'app_aboutus')]
+    public function aboutUs(EntityManagerInterface $doctrine): Response
+    {
+        return $this->redirectToRoute('app_default');
+
+        return $this->render('default/about.html.twig', [
+            // 'recentBlogs' => array_reverse($this->getBlogList($doctrine, 6)),
+        ]);
+    }
 }

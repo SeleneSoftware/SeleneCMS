@@ -225,7 +225,7 @@
                                     </p>
                                     <footer>
                                         <ul class="actions">
-                                            <li><a href="#" class="button">{% apply ctaButton_content %}Find out more{% endapply %}</a></li>
+                                            <li><a href="{{ path('app_aboutus') }}" class="button">{% apply ctaButton_content %}Find out more{% endapply %}</a></li>
                                         </ul>
                                     </footer>
                                 </section>
@@ -245,6 +245,7 @@
                                     </ul>
                                 </section>
                             </div>
+                            {# I have been working on a footer component in the dash, but I don't think it's ready to debut.  So it isn't here.  Maybe v0.13
                             <div class="col-4 col-6-medium col-12-small">
                                 <section>
                                     <header>
@@ -260,6 +261,9 @@
                                     </ul>
                                 </section>
                             </div>
+                            #}
+
+                            <div class="col-4 col-12-medium">{# Ever wanted to fool the CSS? #}</div>
                             <div class="col-4 col-12-medium">
                                 <section>
                                     <header>
