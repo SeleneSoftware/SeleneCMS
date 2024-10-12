@@ -61,7 +61,7 @@
 
                     {% block banner %}
                         <!-- Banner -->
-                        <section id="banner" style="background: #CCE8F4 url('{{ asset('images/pic01.jpg') }}')">
+                        <section id="banner" style="background: #CCE8F4 url('{% apply banner_image %}{{ asset('images/pic01.jpg') }}{% endapply %}')">
                             <header>
                                 <h2>Howdy. This is Dopetrope.</h2>
                                 <p>A responsive template by HTML5 UP</p>
