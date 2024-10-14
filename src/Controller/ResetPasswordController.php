@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
-use Selene\CMSBundle\Controller\PasswordController;
+use Selene\CMSBundle\Controller\ResetPasswordController as RPC;
 
-class ResetPasswordController extends PasswordController
+class ResetPasswordController extends RPC
 {
     protected $fromEmail = 'mailbot@selenesoftware.us';
 
