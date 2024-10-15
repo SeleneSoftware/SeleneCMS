@@ -9,6 +9,11 @@ framework:
     #esi: true
     #fragments: true
 
+    # Looking to increase filesize uploads
+    http_method_override: true
+    # upload_max_filesize: 200M  # Custom setting (optional)
+
+
 when@test:
     framework:
         test: true

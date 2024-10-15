@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    | Log in!
+    {{ parent() }} | Log in!
 {% endblock %}
 
 {% block banner %}
@@ -18,9 +18,11 @@
 
 
                     <section id="intro" class="container">
+                        {% block titleContent %}
                         <header class="major">
                             <h2>{% apply loginTitle_content %}Login{% endapply %}</h2>
                         </header>
+                        {% endblock %}
 
                         {% block errorMSG %}
                             {% if error %}
@@ -68,6 +70,7 @@
                                             <button type="submit" class="button large">Submit</button>
                                         </li>
                                     </ul>
+                                    <p><a href="{{ path('selene_cms_forgot_password_request') }}">Forgot password</a></p>
                                 </form>
                             </footer>
                         {% endblock %}
